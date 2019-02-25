@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<head>
+<script src="/assets/jquery.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Coiny' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Anton|Merriweather" rel="stylesheet">
+<style>
+body {
+  font-family: helvetica, sans-serif;
+  margin: 0 auto;
+  max-width: 600px;
+  background: grey;
+  background: url("https://cms.hostelworld.com/hwblog/wp-content/uploads/sites/2/2017/02/doughnut-plant-nyc.jpg");
+  background-size: 100%;
+}
+div {
+  height: 350px;
+  background-size: cover;
+  position: relative;
+  margin: 40px 0 0 0;
+  border-radius: 12px;
+}
+h1 {
+  font-family: 'Coiny', cursive;
+  text-align: center;
+  font-size: 75px;
+  color: white;
+  margin: 60px 0 0 0;
+}
+
+    ul {
+      padding: 10px;
+      background: rgba(0,0,0,0.5);
+      background-color: pink;
+      text-align: center;
+    }
+    li {
+      display: inline;
+      padding: 0px 10px 0px 10px;
+    }
+    
+h2 {
+  text-align: center;
+  color: white;
+  margin: 0px 0 70px 0;
+  font-family: 'Anton', sans-serif;
+}
+p {
+  color: rgba(255,255,255,1);
+  background: black;
+  background: linear-gradient(bottom, rgba(182,237,193,1), rgba(0,0,0,.4));
+  background: -webkit-linear-gradient(bottom, rgba(182,237,193,1), rgba(0,0,0,.4));
+  background: -moz-linear-gradient(bottom, rgba(182,237,193,1), rgba(0,0,0,.4));
+  padding: 10px;
+  line-height: 28px;
+  text-align: justify;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  height: 30px;
+  transition: height .5s;
+  -webkit-transition: height .5s;
+  -moz-transition: height .5s;
+   font-family: 'Merriweather', serif
+}
+
+small {
+  opacity: 0;
+}
+
+.show-description p {
+  height: 150px;
+}
+
+.show-description small {
+  opacity: 1;
+}
+
+.price {
+  float: right;
+}
+@media (max-width: 500px) {
+  h1 {
+    font-size: 50px;
+    margin-top: 20px;
+    line-height: 40px;
+  }
+  h2 {
+    font-size: 20px;
+    margin: 20px 0 30px 0;
+  }
+  div {
+    margin: 20px 12px 0 12px;
+  }
+  p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  small {
+    font-size: 16px;
+  }
+}
+
+</style>
+
+</head>
+
+<body>
+  <ul>
+      <li><button onclick="first()">Drinks</button></li>
+      <li><button onclick="second()"> Desserts</button></li>
+    <li><button onclick="third()">Lunch Specials</button></li>
+    </ul>
+<h1>Mish Mash Cafe</h1>
+  
+<h2>a New York City bakery</h2>
+<div id="cafe"></div>
+<script>
+drinkImages = [
+   'url("https://nutritiouslife.com/wp-content/uploads/2015/06/matcha-latte-1302x868.jpg")',
+   
+   'url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzeSyBqszaoSWP8pZladPIPZEmVtrG3zVhHv_zCgnJRKed0L_V)',
+   
+   'url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaF9VNajIAhxlYfUNHIdElQ_Nh6Rt-49y6J8fzvE38SfD5w9J9)',
+]
+
+dessertsImages = [
+  'url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQd8hi2nwAPzaLEeh3h32MeQ38DrEzVYplLH7pid2AwelHSg_h9)',
+  
+  'url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4dcHMAJBRMR6Z9NYlYL6N9L3SpbHFVwcp9T_4-Yg5v8VsE69uTA)',
+  
+  'url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSg2gUU3C4imrroYSzsP3y5GU4aYa8f45wrBjexVxHvOccQ5KK8)',
+  
+]
+
+lunchImages = [
+  'url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCJ6qttqyQ2_GN7GGCZaNvXC0t8KVwYbs9IBFWbcLEPWiIKX4aDA)',
+  
+  'url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQKLm8JTgoecj33_3aTO6o4Ksj5F4-ZjFTVY9pI0a3XbCuAPcK)',
+  
+  'url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSz-c9MzYBZGDe_oT8uAL2dy85DLeOhiDkZ03IDFy_Kl-d6Fc0M)',
+]
+
+drinksDivs = [
+  '<div class="item"><p>Matcha <span class="price">$3.50</span><br /><small>Made of green tea powder,milk,brown sugar, and vanilla.   Addtional charges for whipped cream. *Please be sure to specify whether you prefer with or without ice, frozen or normal* </small></p></div>',
+
+'<div class="item"><p>Thai Iced Tea<span class="price">$3.50</span><br /><small>Similar to Matcha Iced Tea, Thai Iced Tea is a bit sweeter and comes from a special recipe from Thailand, including milk tea powder and includes tapioca which is optional and $0.50 more.</small></p></div>',
+  
+'<div class="item"><p>Mocha Latte <span class="price">$2.50</span><br /><small>Triple chocolate mousse, rich and creamy. Specially made with creme de france. Whole cake prices range from $25 to $120 for half sheet and full sheet.(includes tax)</small></p></div>',
+]
+
+dessertsDivs = [
+  '<div class="item"><p>Blondie <span class="price">$2</span><br /><small>Each Blondie is $2. The Blondies consist of a brownie consistency and consist of nuts and choclate chips, so if you or anyone at your table may have allergies please let our staff know.</small></p></div>',
+
+'<div class="item"><p>Macarons<span class="price">$1.50</span><br /><small>Each macaron is $1.50, the recipe is from Paris, France from the famous De Luche Bakery and Cafe. Creamy crunchy and Delicious.</small></p></div>',
+  
+'<div class="item"><p>Vanilla Creme Slice <span class="price">$5.50</span><br /><small> Rich and Creamy vanilla texture with dripping chocolate. Specially made with vanilla bean. Whole cake prices range from $22 to $110 for half sheet and full sheet.(includes tax)</small></p></div>',
+]
+
+lunchDivs = [
+  '<div class="item"><p>Chicken Salad <span class="price">$5.50</span><br /><small>The sald consists of grilled chicken, lettuce, cherry tomatoes, olives, onions, brocolli, cucumber, peppers, chickpeas. Adittional charges will be added for croutons or extra toppings to the salad. It comes with any dresssing of your choice.</small></p></div>',
+
+'<div class="item"><p>Veggie Sandwich<span class="price">$4.50</span><br /><small>The Veggie Sandwich lunch special consists of any type of bread of your choice, a veggie patty, lettuce, tomatos, onions, cumcumbers, avacado, and any dressings of your choive.</small></p></div>',
+  
+'<div class="item"><p>Carrot Soup <span class="price">$3.50</span><br /><small>This soup consists of hand-picked carrots from organic farms in the south. Freshly made, hot and delicious, additional vegtables and chicken can be added to the soup.</small></p></div>',
+]
+
+
+  $('div').on('click', function() {
+      $(this).toggleClass('show-description');
+  });
+  
+  function first(){
+    food1 = document.getElementById("cafe")
+    food1.innerHTML = ''
+    //alert("You have choose to see drinks")
+      items = document.getElementsByClassName("item")
+    	for (i=0; i<3; i=i+1) {
+    	  food1.innerHTML += drinksDivs[i]
+	    	items[i].style.background = drinkImages[i]
+        items[i].style.backgroundSize = '100% 100%'
+        
+    	}
+  }
+  
+  function second(){
+    food2 = document.getElementById("cafe")
+    food2.innerHTML = ''
+    //alert("You have choose to see desserts")
+      items = document.getElementsByClassName("item")
+    	for (i=0; i<3; i=i+1) {
+    	  food2.innerHTML += dessertsDivs[i]
+	    	items[i].style.background = dessertsImages[i]
+	    	items[i].style.backgroundSize = '100% 100%'
+    	}
+  }
+  
+  function third(){
+    food3 = document.getElementById("cafe")
+    food3.innerHTML = ''
+    //alert("You have coose to see lunch specials")
+       items = document.getElementsByClassName("item")
+    	 for (i=0; i<3; i=i+1) {
+    	   food3.innerHTML += lunchDivs[i]
+	    	items[i].style.background = lunchImages[i]
+	    	items[i].style.backgroundSize = '100% 100%'
+    	}
+  }
+</script>
+
+
+</body>
