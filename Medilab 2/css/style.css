@@ -4,7 +4,17 @@
     Author: BootstrapMade.com
     Author URL: https://bootstrapmade.com
 */
+.container{
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+}
 
+.row{
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+}
 body {
 	font-family: 'Oswald', sans-serif;
 	line-height: 20px;
