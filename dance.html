@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<head>
+  <title>Oshmita Shashi</title>
+  <style>
+    body {
+      text-align: center;
+      background: url("http://mcblogs.montgomerycollege.edu/mcvoices/wp-content/uploads/2017/02/635933316607684169702958543_dance-1.jpg");
+      background-size: cover;
+      background-position: center;
+      color: grey;
+      font-family: 'Fjalla One', sans-serif;
+    }
+    p {
+      font-size: 22px;
+      font-family: 'Staatliches', cursive;
+    }
+    input {
+      border: 0;
+      padding: 10px;
+      font-size: 18px;
+      background-color: purple;
+      color: white; 
+      font-family: 'Aleo', serif;
+    }
+    input[type="submit"] {
+      background: purple;
+      color: white;
+      font-family: 'Aleo', serif;
+    }
+    img {
+      width: 300px;
+      border-radius: 100px;
+    }
+  </style>
+</head>
+<body>
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr2ncXCjB-nhnm5J2qGd24KRVACQEOEEsf3ScPOzIXcYC4ITdL" id="image">
+  <p id = "choose"></p>
+  <input type="email" placeholder="Type Your Choice" id ="choreo">
+  <input type="submit" onclick="submit()" id="type">
+  
+  <script>
+  
+  prompts = {
+    free : "Free Class Or Club?",
+    people: "Strangers or Friends",
+    join : "Choose a class, 1 or 2?",
+    which: "Jazz or Contemporary?",
+    type:"Tap or Classic?",
+    category:"Hip-Hop or Lyrical",
+    stop: "Would you try a workshop?",
+    wow: "Show or Private?",
+    cool:"Do You Like Rap?",
+    never:"Chill music or Fun music?",
+    yurp:"Whats Your Email?",
+    yuh:"Thanks for the feedback!",
+  }
+  image = document.getElementById("image")
+  martin = document.getElementById("choose")
+  dance = document.getElementById("choreo")
+  function submit(){
+    if(dance.value == "Class"){
+      //alert("Thanks For Subscribing!")
+       martin.innerHTML = prompts.join
+       dance.value = ""
+       image.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUvQW7n23R4vz_Ss3hHQvmc_Yd7QezoEpr7IpReMiAl1X1Z9wJag"
+      
+    }
+    if(dance.value == "Club"){
+       martin.innerHTML = prompts.people
+       dance.value = ""
+       image.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4zWqVodigKQPimDs16uvsb1tB2fsbYmnnGHtAD27G6nb62F4V"
+      
+    }
+    if(dance.value == "2"){
+       martin.innerHTML = prompts.which
+       dance.value = ""
+       image.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtDnEtQdhIEam-3Ckvkn_7SwrwLugrFTjOj0fVTJkZRprKtPI"
+      
+    }
+    if(dance.value == "Jazz"){
+       martin.innerHTML = prompts.type
+       dance.value = ""
+       image.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3CXKScjviAJ2QD0dHeuKzU3EEdDgFd2g5G5StPDwJPEwLcoNf"
+      
+    }
+    if(dance.value == "1"){
+       martin.innerHTML = prompts.category
+       dance.value = ""
+       image.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5ZPVs_0oajT7Pvjep2rhrr3AaWzmndSFe18HbybqVjXkjcVeQ"
+      
+    }
+    if(dance.value == "Friends"){
+       martin.innerHTML = prompts.stop
+       dance.value = ""
+       image.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDAZm0r3oG_-_tDc1UO2hPNdEQv4MJId8U-F0P5ukHFmmOM0Z7VQ"
+      
+    }
+    
+    if(dance.value == "Strangers"){
+       martin.innerHTML = prompts.wow
+       dance.value = ""
+       image.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRu0zHTRbiOUcYt3D7V1jE3YdOMnD20AXrrIXFeIUeObwVEijNp"
+      
+    }
+    if(dance.value == "Hip-Hop"){
+       martin.innerHTML = prompts.cool
+       dance.value = ""
+       image.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQn6MCQNDbFzogaZbJt0dgoCoSjFRsS4XVXTGp-2JQ3y4cd9Rk"
+      
+    }
+    if(dance.value == "Lyrical"){
+       martin.innerHTML = prompts.never
+       dance.value = ""
+       image.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_kql_8xLqASfJ0SJp2J-mK84T4xdI5ilqY5z0UEwD4_8xz38X"
+      
+    }
+    if(dance.value == "Private"){
+       martin.innerHTML = prompts.yurp
+       dance.value =""
+       image.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTW4mlfKMFbxm56Mcpm_nhpuBP88KKqouil3cmONQYIpFSa42Nr"
+      
+    }
+    if(dance.value == "Show"){
+       martin.innerHTML = prompts.yuh
+       dance.value = ""
+       image.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS73ku_AgPfqF3Ivhve-eAhzNpdkjlcpsqPkj7x9-zKRDa_8ZO8"
+      
+    }
+    if(dance.value == "Tap"){
+       martin.innerHTML = prompts.yuh
+       dance.value = ""
+       image.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUlyAR2A2jJXYxDXcXw53P_c3IuchKg_Tht9-KL5gINpYidRA87w"
+      
+    }
+     if(dance.value == "Classic"){
+       martin.innerHTML = prompts.yurp
+       dance.value = ""
+       image.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrmNs-LEhjfKij8UA6ik9oRt2yXEPekcstSzVzlCaTfqWcLc8pZw"
+      
+    }
+    if(dance.value == "Chill music"){
+       martin.innerHTML = prompts.yuh
+       dance.value = ""
+       image.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSafGjRaXoMsHA4iJbzndtUrZQ6e2tLGJadig166imcvaRNL671bw"
+      
+    }
+    if(dance.value == "Fun music"){
+       martin.innerHTML = prompts.yurp
+       dance.value = ""
+       image.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3yPljJXCiTeF6TbnFXIVLlnaCBAFHiQ56wvYgmP_8h4-sp_aL"
+      
+    }
+  }
+  
+  martin.innerHTML = prompts.free
+  
+  dance.addEventListener("keyup", function(event){
+    if(event.keyCode === 13){
+      type.click()
+    }
+  })
+      
+  </script>
+  
+ 
+</body>
