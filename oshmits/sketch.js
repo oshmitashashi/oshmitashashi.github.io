@@ -44,7 +44,7 @@ function setup() {
   score = 0
   enemy = 1
   level = 1
-  time = 100
+  time = 20
 }
 
 function draw() {
@@ -80,6 +80,18 @@ function draw() {
   if ( b > height || b < 0 ) {
     direction_v = direction_v * -1
   }
+  
+  if (touches.length == 0)   {
+
+  	controls for main character
+
+  }
+  
+  else { 
+  		x = touches[0].x
+  		y = touches[0].y
+  }
+  
   
 
   
@@ -196,5 +208,3 @@ function generate_alltime_leaderboard() {
 	  alert("All-time leaderboard: " + JSON.stringify(alltime_leaderboard,null,1))
     	}
 }
-
-generate_alltime_leaderboard()
