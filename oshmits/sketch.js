@@ -44,7 +44,7 @@ function setup() {
   score = 0
   enemy = 1
   level = 1
-  time = 20
+  time = 100
 }
 
 function draw() {
