@@ -76,6 +76,12 @@ if (touches.length == 0)   {
 	}
 }
 
+else { 
+   x = touches[0].x
+   y = touches[0].y
+}
+	  
+
 if ( a > width || a < 0 ) {
   direction_h = direction_h * -1
 }
@@ -84,11 +90,6 @@ if ( b > height || b < 0 ) {
   direction_v = direction_v * -1
 }
 
-  
-  else { 
-   x = touches[0].x
-   y = touches[0].y
-  }
   
   
 
