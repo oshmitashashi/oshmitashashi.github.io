@@ -86,8 +86,8 @@ if ( b > height || b < 0 ) {
 
   
   else { 
-  		x = touches[0].x
-  		y = touches[0].y
+   x = touches[0].x
+   y = touches[0].y
   }
   
   
