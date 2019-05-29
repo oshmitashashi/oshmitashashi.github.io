@@ -153,7 +153,7 @@ if ( b > height || b < 0 ) {
   }  
   
 else {
-  game.innerHTML = "Name? <input id ='hehe'><button onclick='restart()'>Restart</button><buttononclick='generate_alltime_leaderboard()'>All-Time LeaderBoard</button>"
+  game.innerHTML = "Name? <input id ='hehe'><button onclick='restart()'>Restart</button><button onclick='generate_alltime_leaderboard()'>All-Time LeaderBoard</button>"
   noLoop()
 
 }
