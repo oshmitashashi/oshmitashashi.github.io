@@ -74,15 +74,14 @@ if (touches.length == 0)   {
 	if(keyIsDown(DOWN_ARROW)){
 	y = y + 7
 	}
+}
 
-	if ( a > width || a < 0 ) {
-	direction_h = direction_h * -1
-	}
+if ( a > width || a < 0 ) {
+  direction_h = direction_h * -1
+}
 
-	if ( b > height || b < 0 ) {
-	direction_v = direction_v * -1
-	}
-
+if ( b > height || b < 0 ) {
+  direction_v = direction_v * -1
 }
 
   
