@@ -56,36 +56,35 @@ function draw() {
   circle(a,b,50);
   a = a + 5*direction_h
   b = b + 5*direction_v
- 
-  if(keyIsDown(LEFT_ARROW)){
-    x = x - 7
-  }
-  
-  if(keyIsDown(RIGHT_ARROW)){
-    x = x + 7
-  }
-  
-    if(keyIsDown(UP_ARROW)){
-     y = y - 7
-  }
+   
+if (touches.length == 0)   {
 
-  if(keyIsDown(DOWN_ARROW)){
-    y = y + 7
-  }
-  
-  if ( a > width || a < 0 ) {
-    direction_h = direction_h * -1
-  }
-  
-  if ( b > height || b < 0 ) {
-    direction_v = direction_v * -1
-  }
-  
-  if (touches.length == 0)   {
+	if(keyIsDown(LEFT_ARROW)){
+	x = x - 7
+	}
 
-  	controls for main character
+	if(keyIsDown(RIGHT_ARROW)){
+	x = x + 7
+	}
 
-  }
+	if(keyIsDown(UP_ARROW)){
+	y = y - 7
+	}
+
+	if(keyIsDown(DOWN_ARROW)){
+	y = y + 7
+	}
+
+	if ( a > width || a < 0 ) {
+	direction_h = direction_h * -1
+	}
+
+	if ( b > height || b < 0 ) {
+	direction_v = direction_v * -1
+	}
+
+}
+
   
   else { 
   		x = touches[0].x
